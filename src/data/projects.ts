@@ -1,0 +1,151 @@
+import type { Project } from '../types';
+
+export const projectsData: Project[] = [
+  {
+    id: 'algomyth',
+    number: 'TARGET 01',
+    codeName: 'OPERATION ALGOMYTH',
+    title: 'Algomyth LMS',
+    category: 'WEB APP',
+    status: 'COMPLETED',
+    tagline: 'Gamified fantasy RPG learning management system for computer science beginners.',
+    description: 'A full-scale web-based gamified Learning Management System (LMS) that turns introductory programming education into an engaging fantasy adventure. Features interactive code exercises, character progression, quest tracking, and dynamic RPG rewards.',
+    techStack: ['React', 'TypeScript', 'Vite', 'CSS', 'Tailwind', 'Supabase'],
+    role: 'Lead Architect & Frontend Systems Engineer',
+    features: [
+      'Interactive quest-based code sandbox and challenge evaluations',
+      'Fantasy RPG questline progression system with XP, level-ups, and skill unlocking',
+      'Modular lesson architecture with syntax highlighting and code linting',
+      'Responsive fantasy-styled game UI designed for high student engagement'
+    ],
+    challenges: 'Designing an intuitive gamification loop that feels genuinely like an RPG while maintaining strict educational rigor and instant code verification feedback.',
+    results: 'Deployed to Vercel with high student usability feedback; proved gamification markedly increases student module completion rates.',
+    githubUrl: 'https://github.com/AdysonReales/Algomyth',
+    liveUrl: 'https://algomyth.vercel.app',
+    featured: true,
+    accentColor: '#E60012',
+    thumbnailType: 'code'
+  },
+  {
+    id: 'sakay-na',
+    number: 'TARGET 02',
+    codeName: 'MISSION BARKER',
+    title: 'Sakay Na!',
+    category: 'GAME SYSTEM',
+    status: 'COMPLETED',
+    tagline: 'Rhythm-based jeepney barker simulation game set in the chaotic streets of Metro Manila.',
+    description: 'Developed for the UPLB COSS Game Jam. Players step into the shoes of a Manila jeepney barker, timing passenger calls to the syncopated beat of traffic, managing passenger routes, fare collections, and street-side urgency.',
+    techStack: ['Unity', 'C#', 'Audio DSP Sync', 'Photoshop', 'Game Design'],
+    role: 'Gameplay Programmer & Audio Systems Lead',
+    features: [
+      'Beat-matched input synchronization engine tied to dynamic street audio',
+      'Authentic Manila cultural references, localized voice lines, and pixel aesthetic',
+      'Fast-paced multiplier score system rewarding precise rhythmic call-outs',
+      'State-machine driven commuter AI boarding and route allocation'
+    ],
+    challenges: 'Achieving sub-16ms audio-input synchronization across different hardware refresh rates within a strict 48-hour game jam timeframe.',
+    results: 'Award-winning submission at UPLB COSS Game Jam; praised by judges for cultural resonance and tight gameplay responsiveness.',
+    githubUrl: 'https://github.com/AdysonReales/Sakay-Na-',
+    liveUrl: 'https://ssukimaru.itch.io',
+    featured: true,
+    accentColor: '#080808',
+    thumbnailType: 'game'
+  },
+  {
+    id: 'swiftblox-ui',
+    number: 'TARGET 03',
+    codeName: 'TOOL PROTOCOL',
+    title: 'SwiftBloxUI',
+    category: 'TOOL / UTILITY',
+    status: 'IN DEVELOPMENT',
+    tagline: 'Automated Figma-to-Roblox UI pipeline bridging vector design and native Luau GuiObjects.',
+    description: 'A developer workflow toolchain that ingests Figma design tokens and component trees, compiling them directly into cleanly structured, responsive native Roblox GuiObjects via TypeScript, Luau, and Rojo integration.',
+    techStack: ['TypeScript', 'Luau', 'Rojo', 'Figma REST API', 'Node.js'],
+    role: 'Full-Stack Tooling Developer',
+    features: [
+      'Direct Figma API vector tree extraction and layout constraint mapping',
+      'Automatic generation of UIAspectRatioConstraints and UICorner nodes',
+      'Luau script generation supporting Rojo two-way filesystem synchronization',
+      'Cuts UI implementation time in Roblox Studio by over 70%'
+    ],
+    challenges: 'Handling Figma\'s flexible auto-layout padding and nesting model when transmuting to Roblox\'s legacy scale/offset GuiObject coordinate system.',
+    results: 'Enables rapid UI iteration between design prototypes and live game builds without manual pixel-pushing in Studio.',
+    githubUrl: 'https://github.com/AdysonReales/SwiftBloxUI-figma-to-roblox',
+    featured: true,
+    accentColor: '#E60012',
+    thumbnailType: 'figma'
+  },
+  {
+    id: 'pathfinding-sim',
+    number: 'TARGET 04',
+    codeName: 'GRID HEURISTIC',
+    title: 'Adaptive Pathfinding Sim',
+    category: 'ALGORITHM & AI',
+    status: 'COMPLETED',
+    tagline: 'Interactive visualizer and benchmarking lab comparing A*, Dijkstra, and BFS in dynamic grids.',
+    description: 'A high-performance algorithmic simulation lab built with Python (Pygame) and C++ modules. Visualizes real-time heuristic evaluations, frontier node expansions, and performance benchmarks in dynamically mutating terrain.',
+    techStack: ['Python', 'Pygame', 'C++', 'Jupyter', 'Algorithms'],
+    role: 'Algorithm Engineer & Visualizer Author',
+    features: [
+      'Side-by-side simultaneous execution of A* (Manhattan/Euclidean), Dijkstra, and Breadth-First Search',
+      'Dynamic obstacle injection, weighted mud/terrain costs, and real-time rerouting',
+      'Detailed telemetry graphs tracking total visited nodes, memory footprint, and time-to-target',
+      'C++ accelerated search kernel for large 1000x1000 node benchmark stress tests'
+    ],
+    challenges: 'Optimizing rendering loop in Pygame while running tens of thousands of node evaluations synchronously.',
+    results: 'Used as an educational aid for data structures and algorithm analysis courses at Mapúa.',
+    githubUrl: 'https://github.com/AdysonReales/Adaptive-Pathfinding-Simulation',
+    featured: false,
+    accentColor: '#9B0011',
+    thumbnailType: 'tree'
+  },
+  {
+    id: 'better-blackboard',
+    number: 'TARGET 05',
+    codeName: 'INFILTRATION SCRIPT',
+    title: 'BetterBlackboardLMS',
+    category: 'TOOL / UTILITY',
+    status: 'COMPLETED',
+    tagline: 'Sleek dark-mode productivity overhaul Chrome extension for Blackboard Learn & Ultra.',
+    description: 'A browser extension that rescues students from Blackboard\'s cluttered, high-contrast default interface. Injects a modern custom theme, fast course bookmark cards, assignment deadline highlights, and customizable keyboard shortcuts.',
+    techStack: ['JavaScript', 'CSS3', 'Chrome Extension Manifest v3', 'DOM MutationObserver'],
+    role: 'Extension Author & UI Designer',
+    features: [
+      'Comprehensive dark mode carefully tuned to reduce eye strain during late-night study sessions',
+      'Streamlined dashboard replacing nested navigation with single-click course cards',
+      'MutationObserver-based real-time DOM injection resilient to Blackboard SPA page transitions',
+      'Zero external dependencies and instant zero-latency page injection'
+    ],
+    challenges: 'Overcoming Blackboard Ultra\'s deeply nested shadow DOM containers and asynchronous React re-renders.',
+    results: 'Used by fellow university students daily to speed up navigation and eliminate glaring white backgrounds.',
+    githubUrl: 'https://github.com/AdysonReales/BetterBlackboardLMS',
+    featured: false,
+    accentColor: '#080808',
+    thumbnailType: 'extension'
+  },
+  {
+    id: 'restart-vn',
+    number: 'TARGET 06',
+    codeName: 'NARRATIVE LAB',
+    title: 'RESTART',
+    category: 'VISUAL NOVEL',
+    status: 'COMPLETED',
+    tagline: 'Psychological mystery & romance visual novel featuring complex branching narrative logic.',
+    description: 'An interactive psychological visual novel built using the Ren\'Py engine and Python scripts. Explores memory loops, interpersonal trust, and moral decisions through branching story graphs and atmospheric audiovisual direction.',
+    techStack: ['Ren\'Py', 'Python', 'FL Studio', 'Narrative Design'],
+    role: 'Director, Writer & Script Programmer',
+    features: [
+      'Multi-tiered state tracking and persistent flag variables modifying character disposition',
+      'Dynamic camera pans, zoom cuts, and custom GUI scripting',
+      'Original soundtrack cues and ambient sound design mixed in FL Studio',
+      'Published on itch.io with multiple distinct ending routes'
+    ],
+    challenges: 'Managing exponential state branching while maintaining narrative coherence and bug-free variable rollback.',
+    results: 'Publicly released on itch.io; showcased narrative writing and game state management skills.',
+    githubUrl: 'https://github.com/AdysonReales/RESTART',
+    liveUrl: 'https://ssukimaru.itch.io/restart-portfolio-version',
+    featured: false,
+    accentColor: '#E60012',
+    thumbnailType: 'renpy'
+  }
+];

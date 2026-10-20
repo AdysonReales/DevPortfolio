@@ -1,0 +1,116 @@
+/* Persona 5 Typography Engine */
+
+.p5-title-giant {
+  font-family: var(--font-title);
+  font-size: clamp(3.5rem, 9vw, 9.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--p5-black);
+  transform: skewX(var(--p5-skew-neg));
+  display: inline-block;
+  user-select: none;
+}
+
+.p5-title-giant.inverted {
+  color: var(--p5-white);
+}
+
+.p5-heading-lg {
+  font-family: var(--font-heavy);
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transform: skewX(var(--p5-skew-neg));
+}
+
+.p5-heading-md {
+  font-family: var(--font-heavy);
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.p5-badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transform: skewX(var(--p5-skew-neg));
+}
+
+.p5-badge-tag.red {
+  background: var(--p5-red);
+  color: var(--p5-white);
+}
+
+.p5-badge-tag.black {
+  background: var(--p5-black);
+  color: var(--p5-white);
+}
+
+.p5-badge-tag.white {
+  background: var(--p5-white);
+  color: var(--p5-black);
+  font-weight: 800;
+}
+
+.p5-badge-tag.yellow {
+  background: var(--p5-yellow);
+  color: var(--p5-black);
+  font-weight: 800;
+}
+
+/* Comic Cutout Lettering */
+.p5-cutout-word {
+  position: relative;
+  display: inline-block;
+  padding: 2px 14px 4px 10px;
+  margin: 0 4px;
+  background: var(--p5-black);
+  color: var(--p5-white);
+  transform: rotate(-2.5deg) skewX(-4deg);
+  box-shadow: 4px 4px 0 var(--p5-red);
+}
+
+.p5-cutout-word.alt {
+  background: var(--p5-red);
+  color: var(--p5-white);
+  transform: rotate(2deg) skewX(4deg);
+  box-shadow: 4px 4px 0 var(--p5-black);
+}
+
+.p5-cutout-word.white {
+  background: var(--p5-white);
+  color: var(--p5-black);
+  transform: rotate(-1.5deg) skewX(-3deg);
+  box-shadow: 4px 4px 0 var(--p5-red);
+}
+
+/* System Mono Data Stamp */
+.p5-mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--p5-gray);
+}
+
+/* Vertical Japanese/English stamp */
+.p5-vertical-stamp {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--p5-gray);
+  user-select: none;
+}

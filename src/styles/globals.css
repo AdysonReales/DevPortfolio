@@ -1,0 +1,74 @@
+@import './variables.css';
+@import './typography.css';
+@import './p5-effects.css';
+@import './layout.css';
+
+/* Core Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--p5-black);
+  color: var(--p5-black);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Persona 5 Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--p5-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--p5-red);
+  border: 2px solid var(--p5-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--p5-red-bright);
+}
+
+/* Screen Stage Container */
+.p5-screen-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Focus Visible for Keyboard Accessibility */
+:focus-visible {
+  outline: 3px solid var(--p5-yellow) !important;
+  outline-offset: 3px !important;
+}
+
+/* Common Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}

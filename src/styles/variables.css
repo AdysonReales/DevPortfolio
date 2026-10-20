@@ -1,0 +1,38 @@
+:root {
+  /* Persona 5 Color System */
+  --p5-black: #080808;
+  --p5-black-tint: #141414;
+  --p5-white: #F5F5F2;
+  --p5-white-dim: #E1E1DC;
+  --p5-red: #E60012;
+  --p5-red-dark: #9B0011;
+  --p5-red-bright: #FF1A2B;
+  --p5-gray: #8B8B8B;
+  --p5-gray-light: #C0C0BA;
+  --p5-yellow: #FFDE00; /* P5 alert yellow */
+
+  /* Typography */
+  --font-heavy: 'Bebas Neue', 'Anton', sans-serif;
+  --font-title: 'Anton', 'Archivo Black', sans-serif;
+  --font-impact: 'Archivo Black', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-condensed: 'Oswald', sans-serif;
+
+  /* Transforms & Skews */
+  --p5-skew-neg: -5deg;
+  --p5-skew-pos: 5deg;
+  --p5-skew-heavy: -8deg;
+
+  /* Polygon Cuts */
+  --clip-slant-right: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  --clip-slant-both: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  --clip-card: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+  --clip-badge: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  --clip-steep-cut: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  --clip-diagonal-half: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  /* UI Transitions */
+  --p5-ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
+  --p5-ease-sharp: cubic-bezier(0.7, 0, 0.3, 1);
+}
