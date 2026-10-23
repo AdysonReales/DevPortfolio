@@ -6,7 +6,7 @@ import { HeaderBar } from './components/common/HeaderBar';
 import { PersonaNav } from './components/navigation/PersonaNav';
 import { TitleScreen } from './components/screens/TitleScreen';
 import { HomeScreen } from './components/screens/HomeScreen';
-import { ProjectsScreen } from './components/screens/ProjectsScreen';
+import { ShowcaseScreen } from './components/screens/ShowcaseScreen';
 import { AboutScreen } from './components/screens/AboutScreen';
 import { SkillsScreen } from './components/screens/SkillsScreen';
 import { ExperienceScreen } from './components/screens/ExperienceScreen';
@@ -26,7 +26,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as PortfolioScreen;
-      const validScreens: PortfolioScreen[] = ['title', 'home', 'projects', 'about', 'skills', 'experience', 'contact'];
+      const validScreens: PortfolioScreen[] = ['title', 'home', 'games', 'projects', 'tools', 'about', 'skills', 'experience', 'contact'];
       if (validScreens.includes(hash) && hash !== activeScreen) {
         triggerNavigation(hash, 'diagonal', false);
       }
@@ -119,9 +119,11 @@ export const App: React.FC = () => {
           />
         )}
 
-        {activeScreen === 'projects' && (
-          <ProjectsScreen />
-        )}
+        {activeScreen === 'games' && <ShowcaseScreen collection="games" />}
+
+        {activeScreen === 'projects' && <ShowcaseScreen collection="projects" />}
+
+        {activeScreen === 'tools' && <ShowcaseScreen collection="tools" />}
 
         {activeScreen === 'about' && (
           <AboutScreen />

@@ -23,12 +23,14 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart }) => {
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   const menuItems = [
-    { id: 'home', label: 'START // DASHBOARD', code: '01' },
-    { id: 'projects', label: 'MISSIONS // PROJECTS', code: '02' },
-    { id: 'about', label: 'DOSSIER // ABOUT ME', code: '03' },
-    { id: 'skills', label: 'THE ARMORY // TECH', code: '04' },
-    { id: 'experience', label: 'INFILTRATIONS // EXP', code: '05' },
-    { id: 'contact', label: 'CALLING CARD // CONTACT', code: '06' },
+    { id: 'home', label: 'ENTER // LANDING PAGE', code: '01' },
+    { id: 'games', label: 'PLAY // GAMES', code: '02' },
+    { id: 'projects', label: 'BUILD // PROJECTS', code: '03' },
+    { id: 'tools', label: 'USE // PERSONAL TOOLS', code: '04' },
+    { id: 'about', label: 'DOSSIER // ABOUT ME', code: '05' },
+    { id: 'skills', label: 'THE ARMORY // TECH', code: '06' },
+    { id: 'experience', label: 'INFILTRATIONS // EXP', code: '07' },
+    { id: 'contact', label: 'CALLING CARD // CONTACT', code: '08' },
   ];
 
   // GSAP Cinematic Opening Animation

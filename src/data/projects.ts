@@ -24,7 +24,9 @@ export const projectsData: Project[] = [
     liveUrl: 'https://algomyth.vercel.app',
     featured: true,
     accentColor: '#E60012',
-    thumbnailType: 'code'
+    thumbnailType: 'code',
+    collection: 'projects',
+    mediaType: 'IMAGE PLACEHOLDER'
   },
   {
     id: 'sakay-na',
@@ -49,7 +51,9 @@ export const projectsData: Project[] = [
     liveUrl: 'https://ssukimaru.itch.io',
     featured: true,
     accentColor: '#080808',
-    thumbnailType: 'game'
+    thumbnailType: 'game',
+    collection: 'games',
+    mediaType: 'GIF PLACEHOLDER'
   },
   {
     id: 'swiftblox-ui',
@@ -73,7 +77,9 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/AdysonReales/SwiftBloxUI-figma-to-roblox',
     featured: true,
     accentColor: '#E60012',
-    thumbnailType: 'figma'
+    thumbnailType: 'figma',
+    collection: 'tools',
+    mediaType: 'GIF PLACEHOLDER'
   },
   {
     id: 'pathfinding-sim',
@@ -97,7 +103,9 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/AdysonReales/Adaptive-Pathfinding-Simulation',
     featured: false,
     accentColor: '#9B0011',
-    thumbnailType: 'tree'
+    thumbnailType: 'tree',
+    collection: 'projects',
+    mediaType: 'GIF PLACEHOLDER'
   },
   {
     id: 'better-blackboard',
@@ -121,7 +129,9 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/AdysonReales/BetterBlackboardLMS',
     featured: false,
     accentColor: '#080808',
-    thumbnailType: 'extension'
+    thumbnailType: 'extension',
+    collection: 'tools',
+    mediaType: 'IMAGE PLACEHOLDER'
   },
   {
     id: 'restart-vn',
@@ -146,6 +156,68 @@ export const projectsData: Project[] = [
     liveUrl: 'https://ssukimaru.itch.io/restart-portfolio-version',
     featured: false,
     accentColor: '#E60012',
-    thumbnailType: 'renpy'
+    thumbnailType: 'renpy',
+    collection: 'games',
+    mediaType: 'GIF PLACEHOLDER'
+  },
+  {
+    id: 'project-placeholder-03',
+    number: 'PROJECT 03',
+    codeName: 'COMING SOON',
+    title: 'Next Full-Stack Build',
+    category: 'WEB APP',
+    status: 'IN DEVELOPMENT',
+    tagline: 'Reserved for an upcoming full-stack project.',
+    description: 'A showcase slot ready for your next product, dashboard, SaaS app, or client build.',
+    techStack: ['Coming soon'],
+    role: 'Full-Stack Developer',
+    features: ['Add your project details here'],
+    challenges: 'To be documented.',
+    results: 'In progress.',
+    featured: false,
+    accentColor: '#E60012',
+    thumbnailType: 'code',
+    collection: 'projects',
+    mediaType: 'IMAGE PLACEHOLDER'
+  },
+  {
+    id: 'project-placeholder-04',
+    number: 'PROJECT 04',
+    codeName: 'COMING SOON',
+    title: 'Next Product Launch',
+    category: 'WEB APP',
+    status: 'PROTOTYPE',
+    tagline: 'Reserved for a future product case study.',
+    description: 'Use this card for a project walkthrough, its live demo, and its repository link.',
+    techStack: ['Coming soon'],
+    role: 'Full-Stack Developer',
+    features: ['Add your project details here'],
+    challenges: 'To be documented.',
+    results: 'In progress.',
+    featured: false,
+    accentColor: '#080808',
+    thumbnailType: 'code',
+    collection: 'projects',
+    mediaType: 'GIF PLACEHOLDER'
+  },
+  {
+    id: 'tool-placeholder-03',
+    number: 'TOOL 03',
+    codeName: 'COMING SOON',
+    title: 'Next Personal Tool',
+    category: 'TOOL / UTILITY',
+    status: 'PROTOTYPE',
+    tagline: 'Reserved for your next workflow utility.',
+    description: 'A dedicated slot for an automation, extension, CLI, or developer utility.',
+    techStack: ['Coming soon'],
+    role: 'Tool Builder',
+    features: ['Add your tool details here'],
+    challenges: 'To be documented.',
+    results: 'In progress.',
+    featured: false,
+    accentColor: '#E60012',
+    thumbnailType: 'extension',
+    collection: 'tools',
+    mediaType: 'IMAGE PLACEHOLDER'
   }
 ];

@@ -1,7 +1,9 @@
 export type PortfolioScreen = 
   | 'title' 
   | 'home' 
+  | 'games'
   | 'projects' 
+  | 'tools'
   | 'about' 
   | 'skills' 
   | 'experience' 
@@ -28,6 +30,8 @@ export interface Project {
   featured: boolean;
   accentColor: string;
   thumbnailType: 'code' | 'game' | 'tree' | 'figma' | 'extension' | 'renpy';
+  collection: 'games' | 'projects' | 'tools';
+  mediaType?: 'IMAGE PLACEHOLDER' | 'GIF PLACEHOLDER';
 }
 
 export interface SkillItem {

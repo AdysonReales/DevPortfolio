@@ -34,11 +34,13 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/adysonreales"
   },
   menuItems: [
-    { id: 'home', label: 'DASHBOARD', code: '01', angle: -2 },
-    { id: 'projects', label: 'MISSIONS', code: '02', angle: 3 },
-    { id: 'about', label: 'DOSSIER', code: '03', angle: -1 },
-    { id: 'skills', label: 'THE ARMORY', code: '04', angle: 2 },
-    { id: 'experience', label: 'INFILTRATIONS', code: '05', angle: -3 },
-    { id: 'contact', label: 'CALLING CARD', code: '06', angle: 1 },
+    { id: 'home', label: 'LANDING PAGE', code: '01', angle: -2 },
+    { id: 'games', label: 'GAMES', code: '02', angle: 3 },
+    { id: 'projects', label: 'PROJECTS', code: '03', angle: -1 },
+    { id: 'tools', label: 'PERSONAL TOOLS', code: '04', angle: 2 },
+    { id: 'about', label: 'DOSSIER', code: '05', angle: -3 },
+    { id: 'skills', label: 'THE ARMORY', code: '06', angle: 1 },
+    { id: 'experience', label: 'INFILTRATIONS', code: '07', angle: -2 },
+    { id: 'contact', label: 'CALLING CARD', code: '08', angle: 2 },
   ]
 };
