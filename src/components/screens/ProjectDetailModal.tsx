@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { X, ExternalLink, CheckCircle2, AlertTriangle, Layers, Award } from 'lucide-react';
 import { GithubIcon } from '../common/GithubIcon';
 import type { Project } from '../../types';
@@ -10,6 +10,24 @@ interface ProjectDetailModalProps {
 }
 
 export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClose }) => {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!project) return;
+    const previous = document.activeElement as HTMLElement | null;
+    dialogRef.current?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') { event.preventDefault(); onClose(); }
+      if (event.key === 'Tab' && dialogRef.current) {
+        const items = Array.from(dialogRef.current.querySelectorAll<HTMLElement>('button, a[href]'));
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1];
+        if (event.shiftKey && (document.activeElement === first || document.activeElement === dialogRef.current)) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => { document.removeEventListener('keydown', handleKey); previous?.focus(); };
+  }, [project, onClose]);
   if (!project) return null;
 
   return (
@@ -21,6 +39,8 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
       }}
     >
       <div 
+        ref={dialogRef}
+        role="dialog" aria-modal="true" aria-labelledby="project-dialog-title" tabIndex={-1}
         className="relative w-full max-w-4xl bg-[#F5F5F2] text-[#080808] border-4 border-[#080808] shadow-[12px_12px_0_#E60012] p-6 sm:p-10 overflow-hidden my-auto"
         onClick={(e) => e.stopPropagation()}
         style={{
@@ -44,7 +64,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
                 {project.status}
               </span>
             </div>
-            <h2 className="font-['Bebas_Neue'] text-4xl sm:text-6xl text-[#080808] leading-none tracking-wide">
+            <h2 id="project-dialog-title" className="font-['Bebas_Neue'] text-4xl sm:text-6xl text-[#080808] leading-none tracking-wide">
               {project.title}
             </h2>
             <p className="font-mono text-xs sm:text-sm font-bold text-[#8B8B8B] tracking-wider uppercase mt-1">
@@ -77,8 +97,18 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
             </p>
           </div>
 
+          {project.caseStudy && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {Object.entries(project.caseStudy).map(([heading, copy]) => (
+                <section key={heading} className="p-4 bg-white border-l-4 border-[#E60012]">
+                  <h3 className="font-['Bebas_Neue'] text-2xl text-[#080808] tracking-wide uppercase">{heading}</h3>
+                  <p className="text-sm text-[#080808] mt-2 leading-relaxed">{copy}</p>
+                </section>
+              ))}
+            </div>
+          )}
           {/* Key Features List */}
-          <div>
+          {project.features.length > 0 && <div>
             <h4 className="font-['Bebas_Neue'] text-2xl text-[#080808] tracking-wide mb-3 flex items-center gap-2">
               <CheckCircle2 size={20} className="text-[#E60012]" />
               <span>TACTICAL FEATURES & IMPLEMENTATION</span>
@@ -96,7 +126,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
                 </div>
               ))}
             </div>
-          </div>
+          </div>}
 
           {/* Challenges & Solutions */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

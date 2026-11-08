@@ -1,0 +1,36 @@
+.archive { width: min(1400px, 100%); margin: 0 auto; padding: clamp(28px, 5vw, 70px); color: #f5f5f2; }
+.archive-heading { position: relative; padding: 12px 0 32px; border-bottom: 3px solid #f5f5f2; }
+.archive-eyebrow { display: inline-block; background: #ffde00; color: #080808; padding: 5px 10px; font: 800 11px monospace; letter-spacing: .12em; transform: rotate(-2deg); }
+.archive-heading h1 { color: white; font-family: 'Bebas Neue', sans-serif; font-size: clamp(58px, 9vw, 120px); line-height: .83; letter-spacing: .015em; margin: 22px 0; text-shadow: 5px 5px 0 #e60012; }
+.archive-heading h1 span { color: #e60012; text-shadow: 4px 4px 0 white; }
+.archive-heading p { max-width: 520px; font-size: 16px; line-height: 1.6; }
+.archive-stamp { position: absolute; right: 5%; bottom: 35px; background: #e60012; border: 4px solid white; padding: 20px; font: 900 24px/.9 'Bebas Neue', sans-serif; transform: rotate(10deg); box-shadow: 6px 6px 0 #080808; }
+.archive-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0; flex-wrap: wrap; }
+.archive-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.archive-filters button { background: #080808; color: white; border: 2px solid white; padding: 8px 14px; font: 800 12px monospace; text-transform: uppercase; cursor: pointer; }
+.archive-filters button[aria-pressed='true'], .archive-filters button:hover { background: #e60012; }
+.archive-count { font: 700 11px monospace; letter-spacing: .1em; }
+.archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.archive-card { min-width: 0; background: #f5f5f2; color: #080808; border: 3px solid #080808; box-shadow: 7px 7px 0 #e60012; display: flex; flex-direction: column; }
+.archive-art { height: 175px; overflow: hidden; position: relative; margin: 12px; background: repeating-linear-gradient(135deg, #161616 0 12px, #242424 12px 24px); color: white; border: 2px solid #080808; }
+.archive-art::before { content: ''; position: absolute; width: 70%; height: 200%; background: #e60012; transform: rotate(28deg); right: -24%; top: -35%; }
+.archive-art--game::before, .archive-art--extension::before { background: #9b0011; }
+.archive-art--tree::before, .archive-art--figma::before { background: #ffde00; }
+.archive-art-number { position: absolute; right: 12px; top: -12px; font: 900 110px 'Bebas Neue', sans-serif; opacity: .2; }
+.archive-art-label { position: absolute; left: 16px; bottom: 14px; font: 800 10px monospace; letter-spacing: .1em; max-width: 75%; }
+.archive-art-label strong { display: block; font: 900 27px/.95 'Bebas Neue', sans-serif; letter-spacing: .03em; margin-top: 8px; }
+.archive-art-star { position: absolute; right: 14px; bottom: 4px; font-size: 46px; color: white; text-shadow: 3px 3px #080808; }
+.archive-card-body { padding: 4px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+.archive-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.archive-tags span { background: #080808; color: white; font: 800 10px monospace; padding: 5px 7px; }
+.archive-tags span:first-child { background: #e60012; }
+.archive-card h2 { font: 900 29px/1 'Bebas Neue', sans-serif; color: #080808; margin: 14px 0 8px; }
+.archive-card p { font-size: 14px; line-height: 1.5; margin: 0 0 14px; }
+.archive-role { font: 700 11px/1.4 monospace; background: #e4e4df; padding: 6px 8px; align-self: flex-start; margin-bottom: 18px; }
+.archive-actions { border-top: 2px solid #080808; padding-top: 14px; margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+.archive-actions button, .archive-actions a { display: inline-flex; align-items: center; gap: 5px; padding: 9px 10px; font: 800 11px monospace; text-decoration: none; cursor: pointer; border: 2px solid #080808; }
+.archive-actions button { background: #e60012; color: white; } .archive-actions a { background: white; color: #080808; }
+.archive-actions button:hover, .archive-actions a:hover { background: #ffde00; color: #080808; }
+.archive :focus-visible { outline: 3px solid #ffde00; outline-offset: 3px; }
+@media (max-width: 950px) { .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .archive { padding: 25px 20px 50px; } .archive-grid { grid-template-columns: 1fr; } .archive-stamp { display: none; } }

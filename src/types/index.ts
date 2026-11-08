@@ -14,7 +14,7 @@ export interface Project {
   number: string;
   codeName: string;
   title: string;
-  category: 'GAME SYSTEM' | 'WEB APP' | 'TOOL / UTILITY' | 'ALGORITHM & AI' | 'VISUAL NOVEL';
+  category: 'GAME SYSTEM' | 'WEB APP' | 'TOOL / UTILITY' | 'ALGORITHM & AI' | 'VISUAL NOVEL' | 'UI/UX CASE STUDY';
   status: 'COMPLETED' | 'IN DEVELOPMENT' | 'PROTOTYPE' | 'EXPANDING';
   tagline: string;
   description: string;
@@ -27,6 +27,7 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   accentColor: string;
+  caseStudy?: { problem: string; research: string; process: string; design: string; solution: string; results: string };
   thumbnailType: 'code' | 'game' | 'tree' | 'figma' | 'extension' | 'renpy';
 }
 

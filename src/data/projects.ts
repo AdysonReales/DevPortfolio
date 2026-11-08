@@ -147,5 +147,22 @@ export const projectsData: Project[] = [
     featured: false,
     accentColor: '#E60012',
     thumbnailType: 'renpy'
+  },
+  {
+    id: 'case-study-template', number: 'TARGET 07', codeName: 'DESIGN DOSSIER',
+    title: 'Your next UI/UX case study', category: 'UI/UX CASE STUDY', status: 'PROTOTYPE',
+    tagline: 'A reusable space for your next design story.',
+    description: 'Case study template — replace this example with a real project, its visuals, and the decisions behind it.',
+    techStack: ['Research', 'Wireframes', 'Prototyping'], role: 'UI/UX Designer',
+    features: [], challenges: 'Add the user problem and context.', results: 'Add validated outcomes when available.',
+    featured: false, accentColor: '#E60012', thumbnailType: 'figma',
+    caseStudy: {
+      problem: 'Describe the people, context, and problem this project addresses.',
+      research: 'Add your research methods, participants, and the insights that shaped the work.',
+      process: 'Explain how you framed the challenge, explored ideas, and tested your assumptions.',
+      design: 'Show the key flows, wireframes, visual decisions, and iterations here.',
+      solution: 'Explain the final experience and how it responds to the problem.',
+      results: 'Share measured outcomes, feedback, and lessons learned when available.'
+    }
   }
 ];
