@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, User, Send } from 'lucide-react';
+import { ArrowRight, Gamepad2, Wrench, User, Send } from 'lucide-react';
 import type { PortfolioScreen } from '../../types';
 import { siteConfig } from '../../data/siteConfig';
 import { projectsData } from '../../data/projects';
@@ -38,13 +38,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate, onOpenProjec
 
           <div className="flex flex-col leading-[0.88] select-none">
             <h1 className="p5-title-giant text-[#080808] drop-shadow-[5px_5px_0_#E60012]">
-              BUILDING WORLDS.
+              FULL-STACK SYSTEMS.
             </h1>
             <h1 className="p5-title-giant text-[#080808] drop-shadow-[5px_5px_0_#FFFFFF]">
-              WRITING SYSTEMS.
+              PLAYABLE WORLDS.
             </h1>
             <h1 className="p5-title-giant text-[#E60012] drop-shadow-[5px_5px_0_#080808]">
-              DESIGNING EXPERIENCES.
+              TOOLS WITH PURPOSE.
             </h1>
           </div>
 
@@ -61,8 +61,30 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate, onOpenProjec
               }}
               className="p5-btn primary flex items-center gap-3 text-lg"
             >
-              <span>INFILTRATE MISSIONS</span>
+              <span>VIEW PROJECTS</span>
               <ArrowRight size={20} />
+            </button>
+
+            <button
+              onClick={() => {
+                soundEngine.playConfirm();
+                onNavigate('games');
+              }}
+              className="p5-btn secondary flex items-center gap-2 text-lg"
+            >
+              <Gamepad2 size={18} />
+              <span>EXPLORE GAMES</span>
+            </button>
+
+            <button
+              onClick={() => {
+                soundEngine.playConfirm();
+                onNavigate('tools');
+              }}
+              className="p5-btn flex items-center gap-2 text-lg bg-[#080808] text-white hover:bg-[#E60012]"
+            >
+              <Wrench size={18} />
+              <span>OPEN TOOLS</span>
             </button>
 
             <button
@@ -160,16 +182,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate, onOpenProjec
           {/* Quick Stats Grid Underneath */}
           <div className="grid grid-cols-3 gap-2 mt-4 select-none">
             <div className="p-3 bg-[#080808] text-white border-2 border-white/30 text-center transform -rotate-1">
-              <div className="font-mono text-[10px] text-[#FFDE00] tracking-widest">ARCANA</div>
-              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">CHARIOT</div>
+              <div className="font-mono text-[10px] text-[#FFDE00] tracking-widest">FOCUS</div>
+              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">FULL STACK</div>
             </div>
             <div className="p-3 bg-[#E60012] text-white border-2 border-[#080808] text-center transform rotate-1">
-              <div className="font-mono text-[10px] text-white tracking-widest">STATUS</div>
-              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">ACTIVE</div>
+              <div className="font-mono text-[10px] text-white tracking-widest">GAMES</div>
+              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">2 BUILDS</div>
             </div>
             <div className="p-3 bg-white text-[#080808] border-2 border-[#080808] text-center transform -rotate-1 shadow-[3px_3px_0_#080808]">
-              <div className="font-mono text-[10px] text-[#080808] font-bold tracking-widest">LEVEL</div>
-              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">LV. 23</div>
+              <div className="font-mono text-[10px] text-[#080808] font-bold tracking-widest">TOOLS</div>
+              <div className="font-['Bebas_Neue'] text-xl leading-none mt-1">3 SLOTS</div>
             </div>
           </div>
         </div>
