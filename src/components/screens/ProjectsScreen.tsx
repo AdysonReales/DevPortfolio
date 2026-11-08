@@ -6,13 +6,13 @@ import { soundEngine } from '../../audio/soundEngine';
 import { ProjectDetailModal } from './ProjectDetailModal';
 import './archive.css';
 
-const filters = ['All work', 'Projects', 'UI/UX'] as const;
+const filters = ['All work', 'Projects', 'Websites', 'Tools', 'UI/UX'] as const;
 type Filter = typeof filters[number];
 
 export const ProjectsScreen: React.FC = () => {
   const [filter, setFilter] = useState<Filter>('All work');
   const [modalProject, setModalProject] = useState<Project | null>(null);
-  const visible = projectsData.filter(project => filter === 'All work' || (filter === 'UI/UX' ? !!project.caseStudy : !project.caseStudy));
+  const visible = projectsData.filter(project => filter === 'All work' || (filter === 'UI/UX' ? !!project.caseStudy : filter === 'Websites' ? project.category === 'WEBSITE' : filter === 'Tools' ? project.collection === 'tools' : project.collection === 'projects' && !project.caseStudy));
 
   return (
     <section className="archive" aria-labelledby="archive-title">

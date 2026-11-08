@@ -16,7 +16,7 @@ export interface Project {
   number: string;
   codeName: string;
   title: string;
-  category: 'GAME SYSTEM' | 'WEB APP' | 'TOOL / UTILITY' | 'ALGORITHM & AI' | 'VISUAL NOVEL' | 'UI/UX CASE STUDY';
+  category: 'GAME SYSTEM' | 'WEB APP' | 'WEBSITE' | 'TOOL / UTILITY' | 'ALGORITHM & AI' | 'VISUAL NOVEL' | 'UI/UX CASE STUDY';
   status: 'COMPLETED' | 'IN DEVELOPMENT' | 'PROTOTYPE' | 'EXPANDING';
   tagline: string;
   description: string;

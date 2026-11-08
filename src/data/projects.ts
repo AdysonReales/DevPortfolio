@@ -1,6 +1,19 @@
 import type { Project } from '../types';
 
+const recentWork: Project[] = [
+  { id: 'web-blocker', title: 'Simple Web Blocker', category: 'TOOL / UTILITY', collection: 'tools', tagline: 'A browser extension for blocking distracting websites.', githubUrl: 'https://github.com/AdysonReales/Simple-Web-Blocker', techStack: ['HTML', 'Browser extension'] },
+  { id: 'excel-widget', title: 'Excel Widget Tool', category: 'TOOL / UTILITY', collection: 'tools', tagline: 'An editable spreadsheet widget for the startup screen and browser.', githubUrl: 'https://github.com/AdysonReales/Excel-Widget-Tool', techStack: ['JavaScript'] },
+  { id: 'web-notepad', title: 'Default Web Notepad', category: 'TOOL / UTILITY', collection: 'tools', tagline: 'A persistent sticky note and developer-focused to-do list in a Chrome extension.', githubUrl: 'https://github.com/AdysonReales/Default-Web-Notepad', techStack: ['JavaScript', 'Chrome extension'] },
+  { id: 'isp-website', title: 'ISP Website', category: 'WEBSITE', collection: 'projects', tagline: 'A responsive course project presenting internet plans and company information.', githubUrl: 'https://github.com/AdysonReales/ITSFINALPROJ', techStack: ['HTML', 'CSS', 'Bootstrap'] },
+].map((item, index) => ({
+  ...item, number: `ARCHIVE ${String(index + 1).padStart(2, '0')}`, codeName: 'GITHUB PROJECT',
+  status: 'COMPLETED', description: item.tagline, role: 'Developer', features: [],
+  challenges: 'Project details to be added.', results: 'Results to be documented.',
+  featured: false, accentColor: '#E60012', thumbnailType: 'code',
+} as Project));
+
 export const projectsData: Project[] = [
+  ...recentWork,
   {
     id: 'algomyth',
     number: 'TARGET 01',
